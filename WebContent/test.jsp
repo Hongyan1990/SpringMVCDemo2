@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-主页面
-<a href="${ pageContext.request.contextPath }/logout">退出</a>
+视图
+    <%System.out.println("视图渲染结束。"); %>
 </body>
 </html>

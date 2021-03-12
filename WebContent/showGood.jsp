@@ -12,5 +12,7 @@
 商品名称：${ good.goodName }
 <br>
 商品数量：${ good.goodNum }
+<br>
+时间：${ good.date }
 </body>
 </html>

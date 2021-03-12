@@ -7,8 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="${ pageContext.request.contextPath }/my/converter" method="get" name="goodForm">
-商品： <input type="text" name="goods" />
+<form action="${ pageContext.request.contextPath }/formatter" method="post" name="goodForm">
+商品名称： <input type="text" name="goodName" />
+<br>
+商品价格： <input type="text" name="goodPrice" />
+<br>
+商品数量： <input type="text" name="goodNum" />
+<br>
+日期： <input type="text" name="date" />
 <br>
 <input type="submit" value="提交" /> 
 </form>
