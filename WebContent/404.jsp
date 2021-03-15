@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-${ goodList }
+404未找到资源
 </body>
 </html>

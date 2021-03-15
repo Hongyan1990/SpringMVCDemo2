@@ -16,7 +16,9 @@
     <!-- LoginController控制器类，映射到"/register" -->
     <!-- <bean name="/register" class="com.imooc.controller.RegisterController"/> -->
     <context:component-scan base-package="com.imooc.controller" />
-    <!-- <context:component-scan base-package="com.imooc.service" /> -->
+    <context:component-scan base-package="com.imooc.service" />
+    <context:component-scan base-package="com.imooc.validator" />
+    
     <mvc:annotation-driven />
     <!-- annotation-driven用于简化开发的配置，注解DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter -->
     <!-- 使用resources过滤掉不需要dispatcherservlet的资源（即静态资源，例如css、js、html、images）。
@@ -57,4 +59,9 @@
         <property name="prefix" value="/" />
         <property name="suffix" value=".jsp" />
     </bean>
+    <!-- 配置消息属性文件 -->
+	<bean id="messageSource"
+	    class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	    <property name="basename" value="/WEB-INF/resource/errorMessages" />
+	</bean>
 </beans>

@@ -25,14 +25,14 @@ public class UserInterceptor implements HandlerInterceptor {
 
 	@Override
 	public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object arg2) throws Exception {
-		String url = req.getRequestURI();
-		if(url.indexOf("/tologin")>=0 || url.indexOf("/mylogin")>=0) return true;
-		HttpSession session = req.getSession();
-		Object obj = session.getAttribute("user");
-		if(obj != null) return true;
-		req.setAttribute("msg", "还没登录，请先登录！");
-		req.getRequestDispatcher("/mylogin.jsp").forward(req, res);
-		return false;
+//		String url = req.getRequestURI();
+//		if(url.indexOf("/tologin")>=0 || url.indexOf("/mylogin")>=0) return true;
+//		HttpSession session = req.getSession();
+//		Object obj = session.getAttribute("user");
+//		if(obj != null) return true;
+//		req.setAttribute("msg", "还没登录，请先登录！");
+//		req.getRequestDispatcher("/mylogin.jsp").forward(req, res);
+		return true;
 	}
 
 }
